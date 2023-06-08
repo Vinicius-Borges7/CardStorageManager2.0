@@ -1,6 +1,6 @@
 // Dependencies //
 require('dotenv').config();
-const dbUri = process.env.MONGO_URI;
+const dbUri = process.env.DB_URI;
 const dbName = process.env.DB_NAME;
 
 // Main Code //
