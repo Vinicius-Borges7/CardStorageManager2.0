@@ -1,7 +1,6 @@
 // Dependencies //
 require('dotenv').config();
-const dbUri = process.env.DB_URI;
-const dbName = process.env.DB_NAME;
+const mongoose = require('mongoose');
 
 // Main Code //
 class Database{
@@ -10,8 +9,8 @@ class Database{
     #route;
 
     constructor(route = "???"){
-        this.#dbUri = dbUri;
-        this.#dbName = dbName;
+        this.#dbUri = process.env.DB_URI;
+        this.#dbName = process.env.DB_NAME;
         this.#route = route;
     }
 

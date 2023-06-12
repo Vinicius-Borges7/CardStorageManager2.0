@@ -7,11 +7,13 @@ const bodyParser = require('body-parser');
 const Server = require('./config/server');
 const server = new Server(app);
 
-// Enviroment Variables Call //
-const { PORT } = process.env;
-
 // Middlewares //
 app.use(bodyParser.json());
+
+// Services //
+const crud = require('./services/crud');
+
+app.use('/crud', crud);
 
 // Main Code //
 server.start();  

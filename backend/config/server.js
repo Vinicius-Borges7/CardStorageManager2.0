@@ -8,8 +8,8 @@ class Server {
 	#port;
 
 	constructor(app = undefined){
-		app = app;
-		port = PORT;
+		this.#app = app;
+		this.#port = PORT;
 	}
 
 	start(){
